@@ -27,7 +27,7 @@ module RSpec
         end
 
         let(:request_body) do
-          if headers["Content-Type"] == "application/json"
+          if headers["Content-Type"] == "application/json" && method != "get"
             params.to_json
           else
             params
